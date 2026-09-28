@@ -1,16 +1,13 @@
 using UnityEngine;
-
-public class NewMonoBehaviourScript : Demo
+using TMPro;
+using Unity.VisualScripting;
+using UnityEngine.UI;
+public class Demo : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    public TextMeshProUGUI demo;
 
-    // Update is called once per frame
-    void Update()
+    public void OnClick()
     {
-        
+        demo.text = "Hello World!";
     }
 }
