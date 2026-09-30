@@ -4,6 +4,7 @@ public class Playerbullet : MonoBehaviour
 {
     float speed = 6f;
     PlayerMovement Player;
+    ProjectileMove Projectile;
 
     // Update is called once per frame
     void Update()
@@ -17,8 +18,11 @@ public class Playerbullet : MonoBehaviour
         {
             if (other.GetComponent<ProjectileMove>() != null)
             {
-                Player.scoreVal += other.GetComponent<ProjectileMove>().points;
-                Player.ScoreBox.text = "Score:" + Player.scoreVal;
+                if (other.GetComponent<ProjectileMove>().points > 0)
+                {
+                    Player.scoreVal += other.GetComponent<ProjectileMove>().points;
+                    Player.ScoreBox.text = "Score:" + Player.scoreVal;
+                }
                 Destroy(other.gameObject);
                 Destroy(gameObject);
             }
