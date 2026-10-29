@@ -2,7 +2,7 @@
 - Project name: demo
 - Unity version: Unity 6000.5.10f1
 - Active game object:
-  - Name: EnemyBulletShip
-  - Tag: Untagged
+  - Name: Player
+  - Tag: GalagaPlayer
   - Layer: Default
 <!-- UNITY CODE ASSIST INSTRUCTIONS END -->
